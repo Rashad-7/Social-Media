@@ -8,7 +8,7 @@ import { authentication } from "./src/middleware/Socket/auth.middleware.js"
 import { socketConnection } from "./src/DB/model/User.model.js"
 import { runIo } from "./src/modules/Socket/socket.controller.js"
 const app = express()
-const port = process.env.PORT
+const port = process.env.PORT||3000
 bootstrap(app , express) 
 const httpServer= app.listen(port, () => console.log(chalk.bgGreen(`Example app listening on port ${port} 👉👈`)))
 runIo(httpServer)
